@@ -1,4 +1,4 @@
-# Python Minigame Collection
+# Python Minigames Collection
 
 ## Intro
 
