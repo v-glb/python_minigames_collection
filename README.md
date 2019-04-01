@@ -1,5 +1,7 @@
 # Python Minigames Collection
 
+![demo](img/demo.png)
+
 ## Intro
 
 Welcome to my collection of various minigames written in Python. This project
