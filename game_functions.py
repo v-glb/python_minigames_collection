@@ -87,9 +87,22 @@ def playHangman():
             rip.append('!')
             return ''.join(rip)
 
-    wordlist = os.path.join(base_path, "wordlist/german.dic")
-    with open(wordlist, encoding="ISO-8859-1") as wordfile:
-        words = wordfile.read().split()
+    languageSet = False
+    while languageSet is False:
+        gameLanguage = input("Choose your language. Type 1 for English or 2 for"
+                             " German: ")
+        if gameLanguage == '1':
+            wordlist = os.path.join(base_path, "wordlist/english.dic")
+            with open(wordlist, encoding="ISO-8859-1") as wordfile:
+                words = wordfile.read().split()
+            languageSet = True
+        elif gameLanguage == '2':
+            wordlist = os.path.join(base_path, "wordlist/german.dic")
+            with open(wordlist, encoding="ISO-8859-1") as wordfile:
+                words = wordfile.read().split()
+            languageSet = True
+        else:
+            print("Sorry, I didn't get that. Please try again.\n\n")
 
     wordToGuess = random.choice(words).lower()
     hiddenWord = '_ ' * len(wordToGuess)
